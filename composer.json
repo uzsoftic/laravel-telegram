@@ -24,7 +24,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Uzsoftic\\LaravelTelegram\\": "packages/uzsoftic/laravel-telegram/src/"
+            "Uzsoftic\\LaravelTelegramBot\\": "packages/uzsoftic/laravel-telegram-bot/src/"
         }
     },
     "autoload-dev": {

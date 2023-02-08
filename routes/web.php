@@ -1,6 +1,6 @@
 <?php
 
-use Uzsoftic\LaravelTelegram\Bot;
+use Uzsoftic\LaravelTelegramBot\Bot;
 use Illuminate\Support\Facades\Route;
 
 /*
