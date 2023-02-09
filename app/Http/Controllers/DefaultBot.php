@@ -15,6 +15,7 @@ class DefaultBot extends Controller
 
         // CHECK REQUEST AND USE SAME FUNCTION
         if (!$this->bot && $this->bot->hasRequest()){
+
             if ($this->bot->hasMessage()){
                 $this->message();
             }elseif($this->bot->hasCallback()){
@@ -22,13 +23,15 @@ class DefaultBot extends Controller
             }elseif($this->bot->hasInline()){
                 $this->inline();
             }
+
         }
         // ...
 
     }
 
     public function message(){
-
+        $this->bot->sendMessage(env('TELEGRAM_DEFAULT_ADMIN'), 'Hello World');
+        //match ()
     }
 
     public function callback(){
@@ -39,8 +42,10 @@ class DefaultBot extends Controller
 
     }
 
-    public function testRequest(){
-
+    public function testRequest():void {
+        //dd(request()->all());
+        $this->bot = Uzsoftic\LaravelTelegramBot\Bot([], 'default');
+        $this->bot->sendMessage(env('TELEGRAM_DEFAULT_ADMIN'), 'Hello World');
     }
 
 }

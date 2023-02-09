@@ -1,6 +1,6 @@
 <?php
 
-use Uzsoftic\LaravelTelegramBot\Bot;
+use App\Http\Controllers\DefaultBot;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function(Bot $bot) {
-    return $bot->test();
+Route::get('/test', function(DefaultBot $bot) {
+    return $bot->testRequest();
 });
