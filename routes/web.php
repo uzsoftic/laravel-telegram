@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function(Bot $bot) {
-    return $bot->index();
+    return $bot->test();
 });
